@@ -97,10 +97,10 @@ nav .social_media .hamburger-icon {
   cursor: pointer;
   z-index: 1000;
 }
-nav .social_media .close {
+nav .close {
   display: none;
 }
-nav .social_media .open {
+nav .open {
   display: inherit;
 }
 
