@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$primary-color: #C0212A;
+
+body {
+  font-family: 'Urbanist', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+
+/*-----------head---------*/
+.head {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    color: $primary-color;
+    background-color: #ffffff;
+    padding-inline: 2rem;
+
+    .content {
+    padding: 10px 20px;
+    }
+
+    p {
+    opacity: 0.8;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    }
+
+    .social_media i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    margin-left: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+    }
+
+    .social_media i:hover {
+    border: 2px solid #fff;
+    color: white;
+    }
+}
+
+/*-----------head---------*/
+/*-----------header---------*/
+nav {
+  .sidenav {
+    height: 40%;
+    position: fixed;
+    z-index: 10000;
+    top: 8%;
+    right: 2.5%;
+    background: #ffffffad;
+    overflow-y: hidden;
+    transition: 0.5s;
+    border-radius: 2rem;
+
+
+    .menu_items {
+      float: right;
+
+      a {
+        margin: 20px;
+        display: block;
+        color: $primary-color;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: .3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+              
+      }
+    } 
+  }
+  
+  .social_media {
+
+    .closebtn,
+    .hamburger-icon {
+      position: fixed;
+      top: 15px;
+      right: 1%;
+      font-size: 2rem;
+      color:$primary-color;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .close {
+      display: none;
+
+    }
+
+    .open {
+      display: inherit;
+    }
+  }
+}
+
+/*-----------home---------*/
+.home {
+
+  .item {
+    .heading {
+      position: relative;
+      // z-index: 10;
+      color: #000;
+      text-align: center;
+      max-width: 60%;
+      margin: auto;
+      margin-top: 5%;
+      
+      h1 {
+        font-size: 7rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 120px;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      p {
+        color: white;
+        line-height: 30px;
+        font-size: 1rem;
+        opacity: 0.7;
+      }
+
+      button {
+        background: $primary-color;
+        border: none;
+        color: white;
+        border-radius: 50px;
+        font-size: 1rem;
+        margin-top: .5rem;
+        transition: 0.5s;
+        cursor: pointer;
+        padding: 1rem 3rem;
+      
+    
+        &:hover {
+          background: white;
+          color: $primary-color;
+        }
+      }
+      
+    }
+
+    .img {
+      img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 90vh;
+      
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 90vh;
+          background-color: rgba(0, 0, 0, 0.726);
+          z-index: 1;
+        }
+      }
+      
+      
+    }
+    
+
+  }
+
+  
+
+}
+
+/*-----------products---------*/
+.our-products {
+  text-align: center;
+  margin-top: 3rem;
+  
+  .container {
+    max-width: 90%;
+    margin: auto;
+    
+    .heading {
+      h2 {
+        font-size: 50px;
+        // margin-top: 15px;
+      }
+    }
+    
+    .mtop {
+      margin-top: 5%;
+
+      .product-item {
+
+        .product-img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          object-fit: cover;
+          width: 100%;
+          img {
+            border-radius: .5rem;
+            width: 12rem;
+            height: 12rem;
+          }
+        }
+        .product-text {
+          h3 {
+            font-size: 25px;
+            margin: 20px 0;
+          }
+
+        }
+      }
+    }
+  }
+}

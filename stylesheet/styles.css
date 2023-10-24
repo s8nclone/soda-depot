@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+/*-----------head---------*/
+.head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  color: #C0212A;
+  background-color: #ffffff;
+  padding-inline: 2rem;
+}
+.head .content {
+  padding: 10px 20px;
+}
+.head p {
+  opacity: 0.8;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+.head .social_media i {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #C0212A;
+  border: 2px solid #C0212A;
+  border-radius: 50%;
+  margin-left: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.head .social_media i:hover {
+  border: 2px solid #fff;
+  color: white;
+}
+
+/*-----------head---------*/
+/*-----------header---------*/
+nav .sidenav {
+  height: 40%;
+  position: fixed;
+  z-index: 10000;
+  top: 8%;
+  right: 2.5%;
+  background: rgba(255, 255, 255, 0.6784313725);
+  overflow-y: hidden;
+  transition: 0.5s;
+  border-radius: 2rem;
+}
+nav .sidenav .menu_items {
+  float: right;
+}
+nav .sidenav .menu_items a {
+  margin: 20px;
+  display: block;
+  color: #C0212A;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav .sidenav .menu_items a:hover {
+  transform: scale(1.1);
+}
+nav .social_media .closebtn,
+nav .social_media .hamburger-icon {
+  position: fixed;
+  top: 15px;
+  right: 1%;
+  font-size: 2rem;
+  color: #C0212A;
+  cursor: pointer;
+  z-index: 1000;
+}
+nav .social_media .close {
+  display: none;
+}
+nav .social_media .open {
+  display: inherit;
+}
+
+/*-----------home---------*/
+.home .item .heading {
+  position: relative;
+  color: #000;
+  text-align: center;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 5%;
+}
+.home .item .heading h1 {
+  font-size: 7rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 120px;
+}
+.home .item .heading h1 span {
+  color: #C0212A;
+}
+.home .item .heading p {
+  color: white;
+  line-height: 30px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.home .item .heading button {
+  background: #C0212A;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 1rem 3rem;
+}
+.home .item .heading button:hover {
+  background: white;
+  color: #C0212A;
+}
+.home .item .img img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 90vh;
+}
+.home .item .img img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.726);
+  z-index: 1;
+}
+
+/*-----------products---------*/
+.our-products {
+  text-align: center;
+  margin-top: 3rem;
+}
+.our-products .container {
+  max-width: 90%;
+  margin: auto;
+}
+.our-products .container .heading h2 {
+  font-size: 50px;
+}
+.our-products .container .mtop {
+  margin-top: 5%;
+}
+.our-products .container .mtop .product-item .product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 100%;
+}
+.our-products .container .mtop .product-item .product-img img {
+  border-radius: 0.5rem;
+  width: 12rem;
+  height: 12rem;
+}
+.our-products .container .mtop .product-item .product-text h3 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
