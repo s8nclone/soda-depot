@@ -216,7 +216,7 @@ nav {
     
     .heading {
       h2 {
-        font-size: 50px;
+        font-size: 5rem;
         // margin-top: 15px;
       }
     }
@@ -246,6 +246,148 @@ nav {
 
         }
       }
+    }
+  }
+}
+
+/*-----------stop-by----------*/
+.stop-by {
+  color: #fff;
+  background-image: url(../images/pouredSodaDrink.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .stop-by_wrapper {
+    float: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100vh;
+    padding-inline: 5rem;
+
+    .stop-by_right-header {
+      text-align: left;
+      h2 {
+        font-size: 2.5rem;
+        span {
+          font-size: 5rem;
+          color:#C0212A;
+        }
+      }
+
+      p {
+        margin-top: .5rem;
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .stop-by_extra_buttons {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-end;
+
+      .more_location_wrapper {
+        font-size: 1rem;
+        .more_location_select {
+          width: 15rem;
+          background-color: #fff;
+          border: none;
+          height: 2rem;
+          outline: none;
+          border-radius: .2rem;
+          font-size: 1rem;
+          padding-inline: .5rem;
+          cursor: pointer;
+        }
+      }
+
+      button {
+        width: 10rem;
+        padding: .5rem;
+        border: none;
+        outline: none;
+        border-radius: .5rem;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
+/*-----------Product prices----------*/
+.product-price {
+  background: #fff;
+
+  .product-price-wrapper {
+    padding: 2rem 0;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .product_menu {
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .product-details {
+        display: flex;
+        width: 45%;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 auto;
+        hr {
+          width: 30%;
+          height: 2px;
+          border-top: 2px dotted gray;
+        }
+
+        .img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            height: 5rem;
+            width: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*-----------active-hours----------*/
+.active-hours {
+  display: flex;
+  height: 50vh;
+  gap: 2rem;
+
+
+  .open-days {
+    width: 20rem;
+
+  }
+
+  .ucl-games-night {
+    background-image: url(../images/championsLeaguePepsi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .game-and-drink {
+    width: calc(100% - calc(20rem*2));
+    img {
+      height: 20rem;
+      width: 100%;
     }
   }
 }

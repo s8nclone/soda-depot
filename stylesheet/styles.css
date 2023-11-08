@@ -170,7 +170,7 @@ nav .open {
   margin: auto;
 }
 .our-products .container .heading h2 {
-  font-size: 50px;
+  font-size: 5rem;
 }
 .our-products .container .mtop {
   margin-top: 5%;
@@ -190,6 +190,128 @@ nav .open {
 .our-products .container .mtop .product-item .product-text h3 {
   font-size: 25px;
   margin: 20px 0;
+}
+
+/*-----------stop-by----------*/
+.stop-by {
+  color: #fff;
+  background-image: url(../images/pouredSodaDrink.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stop-by .stop-by_wrapper {
+  float: right;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  height: 100vh;
+  padding-inline: 5rem;
+}
+.stop-by .stop-by_wrapper .stop-by_right-header {
+  text-align: left;
+}
+.stop-by .stop-by_wrapper .stop-by_right-header h2 {
+  font-size: 2.5rem;
+}
+.stop-by .stop-by_wrapper .stop-by_right-header h2 span {
+  font-size: 5rem;
+  color: #C0212A;
+}
+.stop-by .stop-by_wrapper .stop-by_right-header p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+.stop-by .stop-by_wrapper .stop-by_extra_buttons {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+.stop-by .stop-by_wrapper .stop-by_extra_buttons .more_location_wrapper {
+  font-size: 1rem;
+}
+.stop-by .stop-by_wrapper .stop-by_extra_buttons .more_location_wrapper .more_location_select {
+  width: 15rem;
+  background-color: #fff;
+  border: none;
+  height: 2rem;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  padding-inline: 0.5rem;
+  cursor: pointer;
+}
+.stop-by .stop-by_wrapper .stop-by_extra_buttons button {
+  width: 10rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/*-----------Product prices----------*/
+.product-price {
+  background: #fff;
+}
+.product-price .product-price-wrapper {
+  padding: 2rem 0;
+}
+.product-price .product-price-wrapper h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.product-price .product-price-wrapper .product_menu {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.product-price .product-price-wrapper .product_menu .product-details {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+.product-price .product-price-wrapper .product_menu .product-details hr {
+  width: 30%;
+  height: 2px;
+  border-top: 2px dotted gray;
+}
+.product-price .product-price-wrapper .product_menu .product-details .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-price .product-price-wrapper .product_menu .product-details .img img {
+  height: 5rem;
+  width: 5rem;
+}
+
+/*-----------active-hours----------*/
+.active-hours {
+  display: flex;
+  height: 50vh;
+  gap: 2rem;
+}
+.active-hours .open-days {
+  width: 20rem;
+}
+.active-hours .ucl-games-night {
+  background-image: url(../images/championsLeaguePepsi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.active-hours .game-and-drink {
+  width: calc(100% - 40rem);
+}
+.active-hours .game-and-drink img {
+  height: 20rem;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
