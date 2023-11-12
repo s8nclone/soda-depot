@@ -66,7 +66,6 @@ a {
     }
 }
 
-/*-----------head---------*/
 /*-----------header---------*/
 nav {
   .sidenav {
@@ -217,15 +216,14 @@ nav {
     .heading {
       h2 {
         font-size: 5rem;
-        // margin-top: 15px;
       }
     }
     
-    .mtop {
+    .our-product-list {
       margin-top: 5%;
 
       .product-item {
-
+        
         .product-img {
           display: flex;
           justify-content: center;
@@ -275,7 +273,7 @@ nav {
         font-size: 2.5rem;
         span {
           font-size: 5rem;
-          color:#C0212A;
+          color:$primary-color;
         }
       }
 
@@ -327,7 +325,7 @@ nav {
     padding: 2rem 0;
 
     h2 {
-      font-size: 2rem;
+      font-size: 5rem;
       text-align: center;
     }
 
@@ -368,12 +366,38 @@ nav {
 /*-----------active-hours----------*/
 .active-hours {
   display: flex;
-  height: 50vh;
-  gap: 2rem;
-
+  gap: .5rem;
+  height: 80dvh;
 
   .open-days {
-    width: 20rem;
+    grid-area: top;
+    padding: 1rem 2rem;
+    background-image: url(../images/pouredCoke.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: .1rem;
+    width: 50%;
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .active-days {
+      margin-top: 5rem;
+      .active-time {
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.5;
+
+        h4 {
+          color: $primary-color;
+        }
+      }
+    }
 
   }
 
@@ -381,13 +405,87 @@ nav {
     background-image: url(../images/championsLeaguePepsi.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 5rem;
+    width: 50%;
+
+    h4 {
+      span {
+        color:$primary-color;
+      }
+    }
   }
 
-  .game-and-drink {
-    width: calc(100% - calc(20rem*2));
-    img {
-      height: 20rem;
-      width: 100%;
+}
+
+/*-----------packs----------*/
+.packs {
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+
+  .packs-header {
+    font-size: 3rem;
+  }
+
+  .product-pack {
+    margin: 4rem 0;
+
+    .product-pack-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .pack-img {
+        img {
+          border-radius: .5rem;
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+
+      .pack-info {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        letter-spacing: .03em;
+
+        h5 {
+          color: $primary-color;
+          font-weight: 700;
+        }
+
+        .buy_now {
+          width: 100%;
+          padding:.5rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:hover {
+      background-color: transparent;
+      color: $primary-color;
+      border: 1px solid $primary-color;
     }
   }
 }

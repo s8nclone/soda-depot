@@ -59,7 +59,6 @@ a {
   color: white;
 }
 
-/*-----------head---------*/
 /*-----------header---------*/
 nav .sidenav {
   height: 40%;
@@ -172,22 +171,22 @@ nav .open {
 .our-products .container .heading h2 {
   font-size: 5rem;
 }
-.our-products .container .mtop {
+.our-products .container .our-product-list {
   margin-top: 5%;
 }
-.our-products .container .mtop .product-item .product-img {
+.our-products .container .our-product-list .product-item .product-img {
   display: flex;
   justify-content: center;
   align-items: center;
   object-fit: cover;
   width: 100%;
 }
-.our-products .container .mtop .product-item .product-img img {
+.our-products .container .our-product-list .product-item .product-img img {
   border-radius: 0.5rem;
   width: 12rem;
   height: 12rem;
 }
-.our-products .container .mtop .product-item .product-text h3 {
+.our-products .container .our-product-list .product-item .product-text h3 {
   font-size: 25px;
   margin: 20px 0;
 }
@@ -261,7 +260,7 @@ nav .open {
   padding: 2rem 0;
 }
 .product-price .product-price-wrapper h2 {
-  font-size: 2rem;
+  font-size: 5rem;
   text-align: center;
 }
 .product-price .product-price-wrapper .product_menu {
@@ -295,23 +294,107 @@ nav .open {
 /*-----------active-hours----------*/
 .active-hours {
   display: flex;
-  height: 50vh;
-  gap: 2rem;
+  gap: 0.5rem;
+  height: 80dvh;
 }
 .active-hours .open-days {
-  width: 20rem;
+  grid-area: top;
+  padding: 1rem 2rem;
+  background-image: url(../images/pouredCoke.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 40%;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  width: 50%;
+}
+.active-hours .open-days h2 {
+  text-align: center;
+  font-size: 2em;
+}
+.active-hours .open-days .active-days {
+  margin-top: 5rem;
+}
+.active-hours .open-days .active-days .active-time {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+.active-hours .open-days .active-days .active-time h4 {
+  color: #C0212A;
 }
 .active-hours .ucl-games-night {
   background-image: url(../images/championsLeaguePepsi.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  padding-bottom: 5rem;
+  width: 50%;
 }
-.active-hours .game-and-drink {
-  width: calc(100% - 40rem);
+.active-hours .ucl-games-night h4 span {
+  color: #C0212A;
 }
-.active-hours .game-and-drink img {
-  height: 20rem;
+
+/*-----------packs----------*/
+.packs {
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+.packs .packs-header {
+  font-size: 3rem;
+}
+.packs .product-pack {
+  margin: 4rem 0;
+}
+.packs .product-pack .product-pack-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.packs .product-pack .product-pack-box .pack-img img {
+  border-radius: 0.5rem;
+  width: 12rem;
+  height: 12rem;
+}
+.packs .product-pack .product-pack-box .pack-info {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+.packs .product-pack .product-pack-box .pack-info h5 {
+  color: #C0212A;
+  font-weight: 700;
+}
+.packs .product-pack .product-pack-box .pack-info .buy_now {
   width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.packs button {
+  background-color: #C0212A;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.packs button:hover {
+  background-color: transparent;
+  color: #C0212A;
+  border: 1px solid #C0212A;
 }
 
 /*# sourceMappingURL=styles.css.map */
