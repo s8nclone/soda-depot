@@ -6,8 +6,9 @@
 
 $primary-color: #C0212A;
 
-body {
+body, html {
   font-family: 'Urbanist', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -143,7 +144,7 @@ nav {
 }
 
 /*-----------home---------*/
-.home {
+#home {
   background-image: url(../images/chilledDrink.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -314,7 +315,7 @@ nav {
 }
 
 /*-----------Product prices----------*/
-.product-price {
+#product-price {
   background: #fff;
 
   .product-price-wrapper {
@@ -525,7 +526,7 @@ nav {
 }
 
 /*-----------Footer----------*/
-.footer {
+#footer {
   background-image: url(../images/icedCupOfCoke.jpg);
   background-size: cover;
   background-repeat: no-repeat;

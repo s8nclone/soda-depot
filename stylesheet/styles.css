@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: "Urbanist", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -118,27 +119,27 @@ nav .open {
 }
 
 /*-----------home---------*/
-.home {
+#home {
   background-image: url(../images/chilledDrink.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 20%;
   height: 80dvh;
 }
-.home .item .heading {
+#home .item .heading {
   text-align: center;
   color: #000;
   max-width: 60%;
   margin: auto;
 }
-.home .item .heading h1 {
+#home .item .heading h1 {
   font-size: 6rem;
 }
-.home .item .heading h1 span {
+#home .item .heading h1 span {
   color: #C0212A;
   font-size: 7rem;
 }
-.home .item .heading button {
+#home .item .heading button {
   background: #C0212A;
   border: none;
   color: white;
@@ -150,7 +151,7 @@ nav .open {
   padding: 1rem 3rem;
   font-weight: 700;
 }
-.home .item .heading button:hover {
+#home .item .heading button:hover {
   background: white;
   color: #C0212A;
 }
@@ -256,40 +257,40 @@ nav .open {
 }
 
 /*-----------Product prices----------*/
-.product-price {
+#product-price {
   background: #fff;
 }
-.product-price .product-price-wrapper {
+#product-price .product-price-wrapper {
   padding: 2rem 0;
 }
-.product-price .product-price-wrapper h2 {
+#product-price .product-price-wrapper h2 {
   font-size: 5rem;
   text-align: center;
 }
-.product-price .product-price-wrapper .product_menu {
+#product-price .product-price-wrapper .product_menu {
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.product-price .product-price-wrapper .product_menu .product-details {
+#product-price .product-price-wrapper .product_menu .product-details {
   display: flex;
   width: 45%;
   align-items: center;
   gap: 1rem;
   margin: 0 auto;
 }
-.product-price .product-price-wrapper .product_menu .product-details hr {
+#product-price .product-price-wrapper .product_menu .product-details hr {
   width: 30%;
   height: 2px;
   border-top: 2px dotted gray;
 }
-.product-price .product-price-wrapper .product_menu .product-details .img {
+#product-price .product-price-wrapper .product_menu .product-details .img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-price .product-price-wrapper .product_menu .product-details .img img {
+#product-price .product-price-wrapper .product_menu .product-details .img img {
   height: 5rem;
   width: 5rem;
 }
@@ -429,7 +430,7 @@ nav .open {
 }
 
 /*-----------Footer----------*/
-.footer {
+#footer {
   background-image: url(../images/icedCupOfCoke.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -437,7 +438,7 @@ nav .open {
   height: 80dvh;
   color: #fff;
 }
-.footer .footer-wrapper {
+#footer .footer-wrapper {
   background-image: url(../images/wave-haikei.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -445,71 +446,71 @@ nav .open {
   background-attachment: scroll;
   height: inherit;
 }
-.footer .footer-wrapper .footer-details {
+#footer .footer-wrapper .footer-details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem;
   gap: 1rem;
 }
-.footer .footer-wrapper .footer-details h3 {
+#footer .footer-wrapper .footer-details h3 {
   color: #000;
   font-size: 2rem;
   font-weight: 700;
 }
-.footer .footer-wrapper .footer-details .outro-box {
+#footer .footer-wrapper .footer-details .outro-box {
   width: 30%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.footer .footer-wrapper .footer-details .outro-box p {
+#footer .footer-wrapper .footer-details .outro-box p {
   font-size: 1.2rem;
 }
-.footer .footer-wrapper .footer-details .outro-box .footer-social-icons {
+#footer .footer-wrapper .footer-details .outro-box .footer-social-icons {
   font-size: 1.5rem;
 }
-.footer .footer-wrapper .footer-details .outro-box .footer-social-icons i {
+#footer .footer-wrapper .footer-details .outro-box .footer-social-icons i {
   cursor: pointer;
   transition: 0.3s;
 }
-.footer .footer-wrapper .footer-details .outro-box .footer-social-icons i:hover {
+#footer .footer-wrapper .footer-details .outro-box .footer-social-icons i:hover {
   transform: scale(1.2);
 }
-.footer .footer-wrapper .footer-details .contact-info {
+#footer .footer-wrapper .footer-details .contact-info {
   margin-top: 5rem;
 }
-.footer .footer-wrapper .footer-details .contact-info .address .address-info {
+#footer .footer-wrapper .footer-details .contact-info .address .address-info {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
-.footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-icon {
+#footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-icon {
   font-size: 1.5rem;
 }
-.footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-details h5 {
+#footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-details h5 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
-.footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-details p {
+#footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-details p {
   font-size: 1.2rem;
   padding-inline: 1rem;
 }
-.footer .footer-wrapper .footer-details .subscribe-container {
+#footer .footer-wrapper .footer-details .subscribe-container {
   margin-top: 5rem;
 }
-.footer .footer-wrapper .footer-details .subscribe-container .subscribe-box {
+#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box {
   text-align: center;
   font-size: 1rem;
 }
-.footer .footer-wrapper .footer-details .subscribe-container .subscribe-box input[type=text] {
+#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box input[type=text] {
   width: 90%;
   padding: 0.8rem 1rem;
   border: none;
   outline: none;
   border-radius: 1rem;
 }
-.footer .footer-wrapper .footer-details .subscribe-container .subscribe-box .submit {
+#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box .submit {
   margin: 1rem 0;
   background-color: #fff;
   color: #000;
@@ -522,13 +523,13 @@ nav .open {
   font-size: 1rem;
   font-weight: 600;
 }
-.footer .footer-wrapper .footer-details .subscribe-container .check {
+#footer .footer-wrapper .footer-details .subscribe-container .check {
   font-size: 1.2rem;
 }
-.footer .footer-wrapper .legal {
+#footer .footer-wrapper .legal {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-.footer .footer-wrapper .legal p {
+#footer .footer-wrapper .legal p {
   margin: 0.5rem 2rem;
   font-size: 1.2rem;
 }
