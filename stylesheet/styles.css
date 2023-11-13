@@ -13,14 +13,21 @@ a {
   cursor: pointer;
 }
 
-.flex1 {
+.logo {
+  margin: auto;
+  margin-top: 5rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: #C0212A;
+  border-radius: 50%;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-
-.flex {
-  display: flex;
+.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 /*-----------head---------*/
@@ -34,29 +41,36 @@ a {
   padding-inline: 2rem;
 }
 .head .content {
-  padding: 10px 20px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.head p {
-  opacity: 0.8;
-  margin-top: 15px;
-  font-size: 1.5rem;
+.head .content .social_media {
+  display: flex;
 }
-.head .social_media i {
+.head .content .social_media i {
   width: 40px;
   height: 40px;
-  text-align: center;
-  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #C0212A;
   border: 2px solid #C0212A;
   border-radius: 50%;
   margin-left: 10px;
-  opacity: 0.7;
+  opacity: 0.8;
   cursor: pointer;
   transition: 0.5s;
 }
-.head .social_media i:hover {
-  border: 2px solid #fff;
-  color: white;
+.head .content .social_media i:hover {
+  color: #fff;
+  background-color: #C0212A;
+}
+.head .content .social_media p {
+  opacity: 0.8;
+  margin-top: 15px;
+  font-size: 1.5rem;
 }
 
 /*-----------header---------*/
@@ -89,7 +103,7 @@ nav .sidenav .menu_items a:hover {
 nav .social_media .closebtn,
 nav .social_media .hamburger-icon {
   position: fixed;
-  top: 15px;
+  top: 20px;
   right: 1%;
   font-size: 2rem;
   color: #C0212A;
@@ -104,28 +118,25 @@ nav .open {
 }
 
 /*-----------home---------*/
+.home {
+  background-image: url(../images/chilledDrink.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  height: 80dvh;
+}
 .home .item .heading {
-  position: relative;
-  color: #000;
   text-align: center;
+  color: #000;
   max-width: 60%;
   margin: auto;
-  margin-top: 5%;
 }
 .home .item .heading h1 {
-  font-size: 7rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 120px;
+  font-size: 6rem;
 }
 .home .item .heading h1 span {
   color: #C0212A;
-}
-.home .item .heading p {
-  color: white;
-  line-height: 30px;
-  font-size: 1rem;
-  opacity: 0.7;
+  font-size: 7rem;
 }
 .home .item .heading button {
   background: #C0212A;
@@ -133,36 +144,21 @@ nav .open {
   color: white;
   border-radius: 50px;
   font-size: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   transition: 0.5s;
   cursor: pointer;
   padding: 1rem 3rem;
+  font-weight: 700;
 }
 .home .item .heading button:hover {
   background: white;
   color: #C0212A;
 }
-.home .item .img img {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 90vh;
-}
-.home .item .img img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 90vh;
-  background-color: rgba(0, 0, 0, 0.726);
-  z-index: 1;
-}
 
 /*-----------products---------*/
 .our-products {
   text-align: center;
-  margin-top: 3rem;
+  margin: 2rem 0;
 }
 .our-products .container {
   max-width: 90%;
@@ -250,6 +246,13 @@ nav .open {
   outline: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  background-color: #C0212A;
+  color: #fff;
+  font-weight: 700;
+}
+.stop-by .stop-by_wrapper .stop-by_extra_buttons button:hover {
+  color: #C0212A;
+  background-color: #fff;
 }
 
 /*-----------Product prices----------*/
@@ -295,7 +298,7 @@ nav .open {
 .active-hours {
   display: flex;
   gap: 0.5rem;
-  height: 80dvh;
+  height: 90dvh;
 }
 .active-hours .open-days {
   grid-area: top;
@@ -324,6 +327,9 @@ nav .open {
 .active-hours .open-days .active-days .active-time h4 {
   color: #C0212A;
 }
+.active-hours .open-days .active-days .active-time p {
+  color: #ff0000;
+}
 .active-hours .ucl-games-night {
   background-image: url(../images/championsLeaguePepsi.jpg);
   background-size: cover;
@@ -331,16 +337,18 @@ nav .open {
   grid-area: right;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   background-position: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #fff;
-  padding-bottom: 5rem;
+  padding-top: 15rem;
   width: 50%;
+  text-transform: uppercase;
 }
-.active-hours .ucl-games-night h4 span {
+.active-hours .ucl-games-night h3 span {
   color: #C0212A;
+  font-weight: 900;
+  font-size: 5rem;
 }
 
 /*-----------packs----------*/
@@ -375,7 +383,7 @@ nav .open {
   color: #C0212A;
   font-weight: 700;
 }
-.packs .product-pack .product-pack-box .pack-info .buy_now {
+.packs .product-pack .product-pack-box .buy_now {
   width: 100%;
   padding: 0.5rem;
   margin-top: 1rem;
@@ -395,6 +403,134 @@ nav .open {
   background-color: transparent;
   color: #C0212A;
   border: 1px solid #C0212A;
+}
+
+/*-----------brands----------*/
+.brands .brands-wrapper {
+  text-align: center;
+  margin: 1rem 0;
+}
+.brands .brands-wrapper .brands-container {
+  display: flex;
+}
+.brands .brands-wrapper .brands-container .brand-logo {
+  width: 11rem;
+  height: 11rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.brands .brands-wrapper .brands-container .brand-logo img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.brands .brands-wrapper .brands-container .brand-logo img:hover {
+  transform: scale(1.2);
+}
+
+/*-----------Footer----------*/
+.footer {
+  background-image: url(../images/icedCupOfCoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 80dvh;
+  color: #fff;
+}
+.footer .footer-wrapper {
+  background-image: url(../images/wave-haikei.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 70%;
+  background-attachment: scroll;
+  height: inherit;
+}
+.footer .footer-wrapper .footer-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem;
+}
+.footer .footer-wrapper .footer-details h3 {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.footer .footer-wrapper .footer-details .outro-box {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer .footer-wrapper .footer-details .outro-box p {
+  font-size: 1.2rem;
+}
+.footer .footer-wrapper .footer-details .outro-box .footer-social-icons {
+  font-size: 1.5rem;
+}
+.footer .footer-wrapper .footer-details .outro-box .footer-social-icons i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer .footer-wrapper .footer-details .outro-box .footer-social-icons i:hover {
+  transform: scale(1.2);
+}
+.footer .footer-wrapper .footer-details .contact-info {
+  margin-top: 5rem;
+}
+.footer .footer-wrapper .footer-details .contact-info .address .address-info {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-icon {
+  font-size: 1.5rem;
+}
+.footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-details h5 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.footer .footer-wrapper .footer-details .contact-info .address .address-info .contact-details p {
+  font-size: 1.2rem;
+  padding-inline: 1rem;
+}
+.footer .footer-wrapper .footer-details .subscribe-container {
+  margin-top: 5rem;
+}
+.footer .footer-wrapper .footer-details .subscribe-container .subscribe-box {
+  text-align: center;
+  font-size: 1rem;
+}
+.footer .footer-wrapper .footer-details .subscribe-container .subscribe-box input[type=text] {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+}
+.footer .footer-wrapper .footer-details .subscribe-container .subscribe-box .submit {
+  margin: 1rem 0;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.footer .footer-wrapper .footer-details .subscribe-container .check {
+  font-size: 1.2rem;
+}
+.footer .footer-wrapper .legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.footer .footer-wrapper .legal p {
+  margin: 0.5rem 2rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

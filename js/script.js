@@ -16,7 +16,7 @@ $(document).ready(function() {
         items: 5
       }
     }
-  })
+  });
 
 
   let sideNav = $("#mySidenav");
