@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
 * {
   padding: 0;
   margin: 0;
@@ -7,13 +8,19 @@
 $primary-color: #C0212A;
 
 body, html {
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+.desc-info {
+  text-align: center;
+  color: $primary-color;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -259,11 +266,18 @@ nav {
     .stop-by_right-header {
       text-align: left;
       h2 {
-        font-size: 2.5rem;
+        font-size: 5rem;
+        color:$primary-color;
         span {
-          font-size: 5rem;
-          color:$primary-color;
+          background-color: $primary-color;
+          border-radius: .5rem;
+          padding-inline: .5rem;
+          color: #fff;
         }
+      }
+
+      h4 {
+        font-size: 2.5rem;
       }
 
       p {
@@ -362,70 +376,107 @@ nav {
 
 /*-----------active-hours----------*/
 .active-hours {
-  display: flex;
-  gap: .5rem;
-  height: 90dvh;
+  background-image: url(../images/cupOfCoke.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-size: cover;
+  // color: #fff;
 
-  .open-days {
-    grid-area: top;
-    padding: 1rem 2rem;
-    background-image: url(../images/pouredCoke.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 40%;
-    font-size: 1.5rem;
-    color: #fff;
-    letter-spacing: .1rem;
-    width: 50%;
+  .backdrop {
+    background-color: rgba(255, 255, 255, 0.171);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 
-    h2 {
-      text-align: center;
-      font-size: 2em;
+    .open-days {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      width: 100%;
+      z-index: auto;
+
+      .active-image {
+        width: 50%;
+        padding: 5rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem;
+        }
+      }
+
+      
+      .active-days {
+        width: 50%;
+        padding: 10rem;
+        
+        .active-header {
+          margin-bottom: 5rem;
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+
+        .active-time {
+          display: flex;
+          justify-content: space-between;
+          line-height: 1.5;
+
+          h4 {
+            color: $primary-color;
+          }
+
+          p {
+            color: #ff0000;
+          }
+        }
+      }
+
     }
 
-    .active-days {
-      margin-top: 5rem;
-      .active-time {
-        display: flex;
-        justify-content: space-between;
-        line-height: 1.5;
+    .ucl-games-night {
+      display: flex;
+      align-items: center;
+      font-size: 2.5rem;
+      width: 100%;
 
-        h4 {
-          color: $primary-color;
+
+      .ucl-image {
+        width: 50%;
+        padding: 5rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem;
+        }
+      }
+
+      .ucl-text {
+        width: 50%;
+        padding: 5rem;
+
+        h3 {
+          text-transform: uppercase;
+          span {
+            color:$primary-color;
+            // font-weight: 900;
+            // font-size: 5rem;
+          }
         }
 
         p {
-          color: #ff0000;
+          margin: .5rem 0;
+          font-size: 2rem;
         }
+
+
       }
     }
-
   }
+  
 
-  .ucl-games-night {
-    background-image: url(../images/championsLeaguePepsi.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    grid-area: right;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #fff;
-    padding-top: 15rem;
-    width: 50%;
-    text-transform: uppercase;
-
-    h3 {
-      span {
-        color:$primary-color;
-        font-weight: 900;
-        font-size: 5rem;
-      }
- 
-    }
-  }
 
 }
 
@@ -436,7 +487,9 @@ nav {
   text-align: center;
 
   .packs-header {
-    font-size: 3rem;
+    h2 {
+      font-size: 5rem;
+    }
   }
 
   .product-pack {
@@ -531,7 +584,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 80dvh;
+  height: 85dvh;
   color: #fff;
 
   .footer-wrapper {
@@ -609,16 +662,23 @@ nav {
 
       .subscribe-container {
         margin-top: 5rem;
+        max-width: 30vw;
 
         .subscribe-box {
-          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
           font-size: 1rem;
-          input[type=text] {
-            width: 90%;
-            padding: .8rem 1rem;
+
+
+          input[type=text],
+          input[type=email],
+          .book-us-text {
+            width: 100%;
+            padding: .5rem;
             border: none;
             outline: none;
-            border-radius: 1rem;
+            border-radius: .5rem;
           }
 
           .submit {
@@ -629,15 +689,22 @@ nav {
             outline: none;
             cursor: pointer;
             transition: all .4s ease;
-            padding: 1rem 2rem;
-            border-radius: 1rem;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
             font-size: 1rem;
             font-weight: 600;
+            width: 10rem;
+            align-self: center;
           }
         }
 
         .check {
           font-size: 1.2rem;
+
+          .tandc {
+            color: #000;
+            font-weight: bold;
+          }
         }
       }
     }
@@ -646,7 +713,7 @@ nav {
       border-top: 1px solid rgba(255, 255, 255, 0.5);
       
       p {
-        margin: .5rem 2rem;
+        padding: .5rem 2rem;
         font-size: 1.2rem;
         
       }

@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/source-sans-pro");
 * {
   padding: 0;
   margin: 0;
@@ -5,13 +6,19 @@
 }
 
 body, html {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+.desc-info {
+  text-align: center;
+  color: #C0212A;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -211,11 +218,17 @@ nav .open {
   text-align: left;
 }
 .stop-by .stop-by_wrapper .stop-by_right-header h2 {
-  font-size: 2.5rem;
-}
-.stop-by .stop-by_wrapper .stop-by_right-header h2 span {
   font-size: 5rem;
   color: #C0212A;
+}
+.stop-by .stop-by_wrapper .stop-by_right-header h2 span {
+  background-color: #C0212A;
+  border-radius: 0.5rem;
+  padding-inline: 0.5rem;
+  color: #fff;
+}
+.stop-by .stop-by_wrapper .stop-by_right-header h4 {
+  font-size: 2.5rem;
 }
 .stop-by .stop-by_wrapper .stop-by_right-header p {
   margin-top: 0.5rem;
@@ -297,59 +310,82 @@ nav .open {
 
 /*-----------active-hours----------*/
 .active-hours {
-  display: flex;
-  gap: 0.5rem;
-  height: 90dvh;
-}
-.active-hours .open-days {
-  grid-area: top;
-  padding: 1rem 2rem;
-  background-image: url(../images/pouredCoke.jpg);
+  background-image: url(../images/cupOfCoke.jpg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50%;
   background-size: cover;
-  background-position: 50% 40%;
+}
+.active-hours .backdrop {
+  background-color: rgba(255, 255, 255, 0.171);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.active-hours .backdrop .open-days {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
-  color: #fff;
-  letter-spacing: 0.1rem;
+  width: 100%;
+  z-index: auto;
+}
+.active-hours .backdrop .open-days .active-image {
   width: 50%;
+  padding: 5rem;
 }
-.active-hours .open-days h2 {
-  text-align: center;
-  font-size: 2em;
+.active-hours .backdrop .open-days .active-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
 }
-.active-hours .open-days .active-days {
-  margin-top: 5rem;
+.active-hours .backdrop .open-days .active-days {
+  width: 50%;
+  padding: 10rem;
 }
-.active-hours .open-days .active-days .active-time {
+.active-hours .backdrop .open-days .active-days .active-header {
+  margin-bottom: 5rem;
+}
+.active-hours .backdrop .open-days .active-days .active-header h2 {
+  font-size: 1.5rem;
+}
+.active-hours .backdrop .open-days .active-days .active-time {
   display: flex;
   justify-content: space-between;
   line-height: 1.5;
 }
-.active-hours .open-days .active-days .active-time h4 {
+.active-hours .backdrop .open-days .active-days .active-time h4 {
   color: #C0212A;
 }
-.active-hours .open-days .active-days .active-time p {
+.active-hours .backdrop .open-days .active-days .active-time p {
   color: #ff0000;
 }
-.active-hours .ucl-games-night {
-  background-image: url(../images/championsLeaguePepsi.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  grid-area: right;
+.active-hours .backdrop .ucl-games-night {
   display: flex;
-  flex-direction: column;
-  background-position: center;
-  text-align: center;
+  align-items: center;
   font-size: 2.5rem;
-  color: #fff;
-  padding-top: 15rem;
+  width: 100%;
+}
+.active-hours .backdrop .ucl-games-night .ucl-image {
   width: 50%;
+  padding: 5rem;
+}
+.active-hours .backdrop .ucl-games-night .ucl-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.active-hours .backdrop .ucl-games-night .ucl-text {
+  width: 50%;
+  padding: 5rem;
+}
+.active-hours .backdrop .ucl-games-night .ucl-text h3 {
   text-transform: uppercase;
 }
-.active-hours .ucl-games-night h3 span {
+.active-hours .backdrop .ucl-games-night .ucl-text h3 span {
   color: #C0212A;
-  font-weight: 900;
-  font-size: 5rem;
+}
+.active-hours .backdrop .ucl-games-night .ucl-text p {
+  margin: 0.5rem 0;
+  font-size: 2rem;
 }
 
 /*-----------packs----------*/
@@ -358,8 +394,8 @@ nav .open {
   margin: 1rem auto;
   text-align: center;
 }
-.packs .packs-header {
-  font-size: 3rem;
+.packs .packs-header h2 {
+  font-size: 5rem;
 }
 .packs .product-pack {
   margin: 4rem 0;
@@ -435,7 +471,7 @@ nav .open {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 80dvh;
+  height: 85dvh;
   color: #fff;
 }
 #footer .footer-wrapper {
@@ -498,17 +534,22 @@ nav .open {
 }
 #footer .footer-wrapper .footer-details .subscribe-container {
   margin-top: 5rem;
+  max-width: 30vw;
 }
 #footer .footer-wrapper .footer-details .subscribe-container .subscribe-box {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-size: 1rem;
 }
-#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box input[type=text] {
-  width: 90%;
-  padding: 0.8rem 1rem;
+#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box input[type=text],
+#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box input[type=email],
+#footer .footer-wrapper .footer-details .subscribe-container .subscribe-box .book-us-text {
+  width: 100%;
+  padding: 0.5rem;
   border: none;
   outline: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 #footer .footer-wrapper .footer-details .subscribe-container .subscribe-box .submit {
   margin: 1rem 0;
@@ -518,19 +559,25 @@ nav .open {
   outline: none;
   cursor: pointer;
   transition: all 0.4s ease;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
+  width: 10rem;
+  align-self: center;
 }
 #footer .footer-wrapper .footer-details .subscribe-container .check {
   font-size: 1.2rem;
+}
+#footer .footer-wrapper .footer-details .subscribe-container .check .tandc {
+  color: #000;
+  font-weight: bold;
 }
 #footer .footer-wrapper .legal {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 #footer .footer-wrapper .legal p {
-  margin: 0.5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.2rem;
 }
 
