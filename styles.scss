@@ -139,6 +139,10 @@ nav {
     transition: 0.5s;
     border-radius: 2rem;
 
+    .social_media-small {
+      display: none;
+    }
+
     .menu_items {
       float: right;
 
@@ -180,15 +184,14 @@ nav {
     display: inherit;
   }
 
-  @media screen and (max-width: 900px) {
-    .menu_btn {
-      border: 1px solid blue;
-      .closebtn,
-      .hamburger-icon {
-        position: static;
+  @media screen and (max-width: 600px) {
+    .sidenav {
+      .social_media-small {
+        display: flex;
+        margin: 2rem;
+        gap: 1rem;
       }
     }
-    
   }
 }
 

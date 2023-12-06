@@ -126,6 +126,9 @@ nav .sidenav {
   transition: 0.5s;
   border-radius: 2rem;
 }
+nav .sidenav .social_media-small {
+  display: none;
+}
 nav .sidenav .menu_items {
   float: right;
 }
@@ -153,13 +156,11 @@ nav .close {
 nav .open {
   display: inherit;
 }
-@media screen and (max-width: 900px) {
-  nav .menu_btn {
-    border: 1px solid blue;
-  }
-  nav .menu_btn .closebtn,
-  nav .menu_btn .hamburger-icon {
-    position: static;
+@media screen and (max-width: 600px) {
+  nav .sidenav .social_media-small {
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
   }
 }
 
