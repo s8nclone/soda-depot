@@ -39,12 +39,18 @@ a {
     width: 100%;
     height: 100%;
   }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 1rem;
+    width: 4rem;
+    height: 4rem;
+    
+  }
 }
 
 
 
-/*-----------head---------*/
-.head {
+header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -53,6 +59,18 @@ a {
   background-color: #ffffff;
   padding-inline: 2rem;
 
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    padding-inline: .5rem;
+  }
+  
+}
+
+
+/*-----------head---------*/
+.head {
+  width: 95%;
   .content {
     padding: 1rem 1.5rem;
     display: flex;
@@ -90,6 +108,22 @@ a {
     }
   }
 
+  @media screen and (max-width: 600px){
+    position: static;
+    padding-inline: 0;
+    .content{
+      padding: 1rem 0;
+      .social_media {
+        display: none;
+      }
+
+      .account {
+        display: flex;
+      }
+    }
+    
+  }
+
 }
 
 /*-----------header---------*/
@@ -125,17 +159,14 @@ nav {
     } 
   }
   
-  .social_media {
+  .menu_btn {
 
     .closebtn,
     .hamburger-icon {
-      position: fixed;
-      top: 20px;
-      right: 1%;
       font-size: 2rem;
       color:$primary-color;
       cursor: pointer;
-      z-index: 1000;
+      // z-index: 1000
     }
 
   }
@@ -147,6 +178,17 @@ nav {
 
   .open {
     display: inherit;
+  }
+
+  @media screen and (max-width: 900px) {
+    .menu_btn {
+      border: 1px solid blue;
+      .closebtn,
+      .hamburger-icon {
+        position: static;
+      }
+    }
+    
   }
 }
 
@@ -198,6 +240,32 @@ nav {
     
   }
 
+  @media screen and (max-width: 600px) {
+    .item {
+      margin-top: 5rem;
+      .heading {
+        max-width: 100%;
+        h1 {
+          font-size: 4rem;
+            
+          span {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 900px) {
+    .item {
+      .heading {
+        max-width: 100%;
+      }
+    }
+    
+  }
+
 }
 
 /*-----------products---------*/
@@ -241,6 +309,17 @@ nav {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      .heading {
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+    
   }
 }
 
@@ -326,6 +405,42 @@ nav {
     }
 
   }
+
+  @media screen and (max-width: 600px) {
+    .stop-by_wrapper {
+      width: 100%;
+      float: none;
+      padding-inline: 1rem;
+
+      .stop-by_right-header {
+        h2 {
+          font-size: 4rem;
+        }
+      }
+
+      .stop-by_extra_buttons {
+        .more_location_wrapper {
+          .more_location_select {
+            width: 10rem;
+          }
+        }
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 900px) {
+    .stop-by_wrapper {
+      .stop-by_extra_buttons {
+        .more_location_wrapper {
+          .more_location_select {
+            width: 10rem;
+          }
+        }
+      }
+    }
+    
+  }
 }
 
 /*-----------Product prices----------*/
@@ -370,6 +485,29 @@ nav {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    .product-price-wrapper {
+      h2{
+        font-size: 3.5rem;
+      }
+      .product_menu {
+        padding: 1rem;
+        .product-details {
+          flex-direction: column;
+          .text {
+            p {
+              display: none;
+            }
+          }
+          hr {
+            display: none;
+          }
+        }
+      }
+    }
+    
   }
 
 }
@@ -476,6 +614,51 @@ nav {
     }
   }
   
+  @media screen and (max-width: 600px) {
+    .backdrop {
+      .open-days {
+        .active-image {
+          display: none
+        }
+
+        .active-days {
+          width: 100%;
+          padding: 1rem;
+
+          .active-header {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      .ucl-games-night {
+        flex-direction: column;
+
+        .ucl-image {
+          width: 100%;
+          padding: 1rem;
+
+        }
+
+        .ucl-text {
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+    
+  }
+
+  @media screen and (min-width: 600px) {
+    .backdrop {
+      .open-days {
+        .active-days {
+          padding: 3rem
+        }
+      }
+    }
+    
+  }
 
 
 }
@@ -546,6 +729,15 @@ nav {
       border: 1px solid $primary-color;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .packs-header {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+    
+  }
 }
 
 /*-----------brands----------*/
@@ -575,6 +767,18 @@ nav {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    .brands-wrapper {
+      .brands-container {
+        .brand-logo {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+    
   }
 }
 
@@ -645,6 +849,7 @@ nav {
               font-size: 1.5rem;
             }
 
+            .address-details,
             .contact-details {
               h5 {
                 font-size: 1.3rem;
@@ -716,6 +921,110 @@ nav {
         padding: .5rem 2rem;
         font-size: 1.2rem;
         
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    height: 100dvh;
+    .footer-wrapper {
+      .footer-details {
+        flex-wrap: wrap;
+        padding: 1rem;
+        gap: 0;
+        .outro-box {
+          width: 30%;
+          gap: .5rem;
+
+          p {
+            display: none;
+          }
+
+          .footer-social-icons {
+            font-size: 1.2rem;
+          }
+        }
+
+        .contact-info {
+          margin-top: 1rem;
+          width: 60%;
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          .address {
+            .address-info {
+              .address-details {
+                display: none
+              }
+
+              .contact-details {
+                h5 {
+                  font-size: 1rem;
+                }
+
+                p {
+                  font-size: 1rem;
+                  padding-inline: 0;
+                }
+              }
+
+              .footer_location_wrapper {
+
+              }
+            }
+          }
+        }
+
+        .subscribe-container {
+          max-width: 100%;
+          margin-top: 0;
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          .subscribe-box {
+
+            .book-us-text {
+              height: 5em;
+            }
+            .submit {
+              margin: .5rem 0;
+              padding: .5rem;
+            }
+          }
+
+          .check {
+            font-size: .8rem;
+          }
+        }
+      }
+
+      .legal {
+        p {
+          padding: .5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    
+  }
+
+  @media screen and (min-width: 600px){
+    .footer-wrapper {
+      .footer-details {
+        .contact-info {
+          .address {
+            .address-info {
+              .footer_location_wrapper {
+                display: none;
+              }
+            }
+          }
+        }
       }
     }
     

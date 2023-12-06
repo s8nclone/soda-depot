@@ -6,10 +6,10 @@ $(document).ready(function() {
     nav: false,
     dots: true,
     responsive: {
-      511: {
+      0: {
         items: 1
       },
-      768: {
+      760: {
         items: 2
       },
       1000: {
@@ -35,7 +35,7 @@ $(document).ready(function() {
     closeBtn.removeClass("open");
   }
 
-  // Attach click event handlers to your elements
+  // attach click event handlers to elements
   hamburgerIcon.click(openNav);
   closeBtn.click(closeNav);
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
   //set the current location to the selected option
   $(".more_location_select").change(function () {
-    // Capture the selected value from select
+    // Get the selected value from select
     let selectedValue = $(this).val(); 
     // Set the text content of .current-location to the selected value
     $(".current-location").text(selectedValue); 
